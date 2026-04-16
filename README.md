@@ -64,3 +64,4 @@ npm.cmd run dev
 3. Incorporar validaciones pedagógicas que expliquen errores en lenguaje infantil.
 4. Agregar persistencia de proyectos y perfiles de estudiantes.
 5. Convertir la documentación de `docs/prism` en manuales colaborativos en Prism.
+# Yachana

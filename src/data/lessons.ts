@@ -1,10 +1,14 @@
 import type { RuntimeValue } from '../language/interpreter';
 
+export type Locale = 'qu' | 'es';
+
+export type LocalizedText = Record<Locale, string>;
+
 export type Lesson = {
   id: string;
-  title: string;
-  objective: string;
-  tip: string;
+  title: LocalizedText;
+  objective: LocalizedText;
+  tip: LocalizedText;
   code: string;
   expectedOutput: string[];
   expectedEnvironment?: Record<string, RuntimeValue>;
@@ -13,17 +17,35 @@ export type Lesson = {
 export const lessons: Lesson[] = [
   {
     id: 'saludo',
-    title: '1. Rimaykuy',
-    objective: 'Aprender a mostrar mensajes con "rimay".',
-    tip: 'Piensa que "rimay" hace hablar a la computadora.',
+    title: {
+      qu: '1. Rimaykuy',
+      es: '1. Saludar',
+    },
+    objective: {
+      qu: 'Yachay rimaywan willakuyta qhawachiy.',
+      es: 'Aprender a mostrar mensajes con "rimay".',
+    },
+    tip: {
+      qu: 'Yuyaymanay: "rimay" nisqaqa computadorata parlachin.',
+      es: 'Piensa que "rimay" hace hablar a la computadora.',
+    },
     code: `rimay "Allillanchu, yachaq masi!";`,
     expectedOutput: ['Allillanchu, yachaq masi!'],
   },
   {
     id: 'variables',
-    title: '2. Wakichiy',
-    objective: 'Guardar datos con "wakichiy" y volver a usarlos.',
-    tip: 'Una variable es como una cajita con nombre.',
+    title: {
+      qu: '2. Wakichiy',
+      es: '2. Guardar datos',
+    },
+    objective: {
+      qu: 'Wakichiywan imakunata waqaychay hinaspa kutichiy.',
+      es: 'Guardar datos con "wakichiy" y volver a usarlos.',
+    },
+    tip: {
+      qu: "Variableqa sutiyuq t'antachaq hina kasqa.",
+      es: 'Una variable es como una cajita con nombre.',
+    },
     code: `wakichiy suti = "Inti";
 wakichiy watas = 8;
 
@@ -37,9 +59,18 @@ rimay "Watas: " + watas;`,
   },
   {
     id: 'condiciones',
-    title: '3. Sichus',
-    objective: 'Tomar decisiones con una condición.',
-    tip: 'La computadora puede elegir un camino si la condición es verdadera.',
+    title: {
+      qu: '3. Sichus',
+      es: '3. Decidir',
+    },
+    objective: {
+      qu: 'Computadorata huk ñan akllachiy huk kamachiywan.',
+      es: 'Tomar decisiones con una condición.',
+    },
+    tip: {
+      qu: 'Cheqaq kaptinqa computadoraqa huk ñanta akllanman.',
+      es: 'La computadora puede elegir un camino si la condición es verdadera.',
+    },
     code: `wakichiy puntos = 12;
 
 sichus (puntos >= 10) {
@@ -54,9 +85,18 @@ sichus (puntos >= 10) {
   },
   {
     id: 'repeticion',
-    title: '4. Muyu',
-    objective: 'Repetir acciones varias veces.',
-    tip: 'Usa "muyu ... kuti" cuando quieras repetir sin volver a escribir.',
+    title: {
+      qu: '4. Muyu',
+      es: '4. Repetir',
+    },
+    objective: {
+      qu: 'Achka kuti rurayta mana kutin qillqaspa ruwachiy.',
+      es: 'Repetir acciones varias veces.',
+    },
+    tip: {
+      qu: '"Muyu ... kuti" nisqawan kutikachay manaraq kutin qillqaspa.',
+      es: 'Usa "muyu ... kuti" cuando quieras repetir sin volver a escribir.',
+    },
     code: `wakichiy k = 1;
 
 muyu 4 kuti {

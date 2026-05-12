@@ -1,0 +1,102 @@
+:root {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: #2d1f17;
+  background:
+    radial-gradient(circle at top left, rgba(111, 196, 233, 0.78), transparent 24%),
+    radial-gradient(circle at top right, rgba(0, 164, 253, 0.3), transparent 22%),
+    linear-gradient(180deg, #fff9ed 0%, #26acf4 100%);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+code,
+pre {
+  font-family: "Consolas", "Cascadia Code", monospace;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-layout {
+  min-height: 100vh;
+}
+
+.page-stack {
+  display: grid;
+  gap: 24px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 14px;
+  font-size: clamp(2.1rem, 4vw, 3.7rem);
+  line-height: 1.03;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+p,
+small,
+span,
+strong {
+  color: #624433;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #b45309;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.muted-text {
+  color: #856553;
+}
